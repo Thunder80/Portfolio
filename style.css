@@ -13,10 +13,20 @@ little boy blue: #72A1E5;
 medium purple: #9883E5;
 toolbox: #726DA8;
 */
+a{
+	background-color: transparent;
+	color: white;
+}
+a:hover{
+	color: black;
+}
+h1{
+	display: inline-block;
+}
 .grid-container{
 	display: grid;
-	width: 1200px;
-	height: 720px;
+	width: 100vw;
+	height: 95vh;
 	grid-template-columns: 50% 50%;
 	grid-template-rows: 10% 40% 40% 10%;
 	grid-gap: 5px;
@@ -58,7 +68,7 @@ h1.home-text{
 	background-color: transparent;
 	color: white;
 	position: relative;
-	left: -250px;
+	left: -50%;
 	animation-name: leftToRightUpper;
 	animation-fill-mode: forwards;
 	animation-delay: 2s;
@@ -76,7 +86,7 @@ h1.about-text{
 	background-color: transparent;
 	color: white;
 	position: relative;
-	left: 750px;
+	left: 150%;
 	animation-name: rightToLeftUpper;
 	animation-fill-mode: forwards;
 	animation-delay: 2s;
@@ -94,7 +104,7 @@ h1.contact-text{
 	background-color: transparent;
 	color: white;
 	position: relative;
-	left: -350px;
+	left: -50%;
 	animation-name: leftToRightLower;
 	animation-fill-mode: forwards;
 	animation-delay: 2s;
@@ -112,7 +122,7 @@ h1.projects-text{
 	background-color: transparent;
 	color: white;
 	position: relative;
-	left: 750px;
+	left: 150%;
 	animation-name: rightToLeftLower;
 	animation-fill-mode: forwards;
 	animation-delay: 2s;
@@ -125,10 +135,16 @@ h1.projects-text{
 	background-color: #2E382E;
 }
 
-div.fade h1:hover{
-	width: 150%;
-	height: 150%;
-	color: black;
+h1:hover{
+	animation-name: home;
+	animation-timing-function: linear;
+	animation-duration: 2s;
+	animation-fill-mode: backwards;
+}
+
+@keyframes home{
+	from {font-size: 2em;}
+	to {font-size: 3em;}
 }
 
 @keyframes fadeIn{
@@ -137,25 +153,25 @@ div.fade h1:hover{
 }
 
 @keyframes leftToRightUpper{
-	 0%  { left:-250px; top:0px;}
-  	50%  { left:100px; top:0px;}
-  	100%  { left:200px; top:125px;}
+	 0%  { left:-50%; top:0px;}
+  	50%  { left:0%; top:0px;}
+  	100%  { left:40%; top:125px;}
 }
 
 @keyframes rightToLeftLower{
-	 0%  { left:800px; top:200px;}
-  	50%  { left:100px; top:200px;}
-  	100% { left:250px; top:125px;}
+	 0%  { left:150%; top:200px;}
+  	50%  { left:85%; top:200px;}
+  	100% { left:40%; top:125px;}
 }
 
 @keyframes leftToRightLower{
-	 0%  { left:-350px; top:200px;}
-  	50%  { left:100px; top:200px;}
-  	100% { left:180px; top:125px;}
+	 0%  { left:-50%; top:200px;}
+  	50%  { left:0%; top:200px;}
+  	100% { left:36%; top:125px;}
 }
 
 @keyframes rightToLeftUpper{
-	 0%  { left:800px; top:0;}
-  	50%  { left:100px; top:0px;}
-  	100% { left:250px; top:125px;}
+	 0%  { left:150%; top:0;}
+  	50%  { left:85%; top:0px;}
+  	100% { left:42%; top:125px;}
 }
