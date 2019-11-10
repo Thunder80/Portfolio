@@ -1,0 +1,161 @@
+*{
+	margin: 0;
+	padding: 0;
+	background-color: black;
+	font-family: 'Raleway', sans-serif;
+}
+
+/*
+color palette:
+jet: #2E382E;
+rich maroon: #B8336A;
+little boy blue: #72A1E5;
+medium purple: #9883E5;
+toolbox: #726DA8;
+*/
+.grid-container{
+	display: grid;
+	width: 1200px;
+	height: 720px;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: 10% 40% 40% 10%;
+	grid-gap: 5px;
+	margin: auto;
+}
+
+.fade{
+	opacity: 0;
+	animation-name: fadeIn;
+	animation-fill-mode: forwards;
+	animation-duration: 1s;
+	transition: font-size;
+	transition-duration: 5s;
+	transition-timing-function: ease-in-out;
+}
+
+.header{
+	grid-column: 1 / 3;
+	grid-row: 1;
+	background-color: #2E382E;
+}
+
+h2.header-text{
+	background-color: transparent;
+	font-size: 40px;
+	color: white;
+	text-align: center;
+	animation-delay: 2.5s;
+}
+
+.home{
+	grid-column: 1;
+	grid-row: 2;
+	background-color: #B8336A;
+	animation-delay: .5s;
+}
+
+h1.home-text{
+	background-color: transparent;
+	color: white;
+	position: relative;
+	left: -250px;
+	animation-name: leftToRightUpper;
+	animation-fill-mode: forwards;
+	animation-delay: 2s;
+	animation-duration: 2s;
+}
+
+.about{
+	grid-column: 2;
+	grid-row: 2;
+	background-color: #72A1E5;
+	animation-delay: 1s;
+}
+
+h1.about-text{
+	background-color: transparent;
+	color: white;
+	position: relative;
+	left: 750px;
+	animation-name: rightToLeftUpper;
+	animation-fill-mode: forwards;
+	animation-delay: 2s;
+	animation-duration: 2s;
+}
+
+.contact{
+	grid-column: 1;
+	grid-row: 3;
+	background-color: #9883E5;
+	animation-delay: 1.5s;
+}
+
+h1.contact-text{
+	background-color: transparent;
+	color: white;
+	position: relative;
+	left: -350px;
+	animation-name: leftToRightLower;
+	animation-fill-mode: forwards;
+	animation-delay: 2s;
+	animation-duration: 2s;
+}
+
+.projects{
+	grid-column: 2;
+	grid-row: 3;
+	background-color: #726DA8;
+	animation-delay: 2s;
+}
+
+h1.projects-text{
+	background-color: transparent;
+	color: white;
+	position: relative;
+	left: 750px;
+	animation-name: rightToLeftLower;
+	animation-fill-mode: forwards;
+	animation-delay: 2s;
+	animation-duration: 2s;
+}
+
+.footer{
+	grid-column: 1 / 3;
+	grid-row: 4;
+	background-color: #2E382E;
+}
+
+div.fade h1:hover{
+	width: 150%;
+	height: 150%;
+	color: black;
+}
+
+@keyframes fadeIn{
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+@keyframes leftToRightUpper{
+	 0%  { left:-250px; top:0px;}
+  	50%  { left:100px; top:0px;}
+  	100%  { left:200px; top:125px;}
+}
+
+@keyframes rightToLeftLower{
+	 0%  { left:800px; top:200px;}
+  	50%  { left:100px; top:200px;}
+  	100% { left:250px; top:125px;}
+}
+
+@keyframes leftToRightLower{
+	 0%  { left:-350px; top:200px;}
+  	50%  { left:100px; top:200px;}
+  	100% { left:180px; top:125px;}
+}
+
+@keyframes rightToLeftUpper{
+	 0%  { left:800px; top:0;}
+  	50%  { left:100px; top:0px;}
+  	100% { left:250px; top:125px;}
+}
